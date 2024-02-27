@@ -1,0 +1,6 @@
+###
+GET http://localhost:4004/odata/v4/bookshop/Books?$expand=author&$select=name
+Content-Type: application/json
+
+{
+}
