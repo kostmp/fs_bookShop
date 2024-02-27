@@ -2,6 +2,8 @@ using bookshop from '../db/schema.cds';
 
 service bookshopService {
     entity Books as projection on bookshop.Books;
+    @cds.redirection.target
+    entity ViewBooks as projection on bookshop.ViewBooks;
     entity Authors as projection on bookshop.Authors;
     entity Customers as projection on bookshop.Customers;
     entity Transactions as projection on bookshop.Transactions;

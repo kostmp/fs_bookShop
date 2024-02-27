@@ -59,9 +59,23 @@ modules:
       - project1.zip
       name: project1
       target-path: resources/
+    - artifacts:
+      - bookshopfe.zip
+      name: bookshopfe
+      target-path: resources/
 - name: project1
   type: html5
   path: app/project1
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: bookshopfe
+  type: html5
+  path: app/bookshop-fe
   build-parameters:
     build-result: dist
     builder: custom
