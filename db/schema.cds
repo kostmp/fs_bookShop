@@ -10,7 +10,7 @@ entity Books : cuid, managed {
     transactions : Association to many Transactions on transactions.book = $self;
 
 }
-
+entity ViewBooks as select * from Books;
 entity Authors : cuid, managed {
     name : String;
     books : Association to many Books on books.author = $self;
