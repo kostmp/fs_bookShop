@@ -1,5 +1,5 @@
 ###
-GET http://localhost:4004/odata/v4/bookshop/Books?$expand=author&$select=name
+POST http://localhost:4004/odata/v4/bookshop/transactionsPay
 Content-Type: application/json
 
 {

@@ -1,1 +1,0 @@
-using bookshopService as service from '../../srv/bookshop-services';

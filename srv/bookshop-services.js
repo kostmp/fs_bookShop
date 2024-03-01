@@ -205,4 +205,11 @@ module.exports = (srv) => {
           req.reject(500, `Error updating customer: ${error.message}`);
         }
     });
+
+    srv.on('transactionsPay', async (req) => {
+        const query = SELECT.from(Transactions).where({ transactionType: 'BUY' });
+        const result = await cds.run(query);
+        console.log(result);
+        return result;
+    });
 }
