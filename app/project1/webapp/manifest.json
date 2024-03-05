@@ -103,6 +103,13 @@
           "target": [
             "TargetMain"
           ]
+        },
+        {
+          "name": "RouteTransactions",
+          "pattern": "Transactions({ID})",
+          "target": [
+            "TargetTransactions"
+          ]
         }
       ],
       "targets": {
@@ -112,6 +119,13 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
+        },
+        "TargetTransactions": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Transactions",
+          "viewName": "Transactions"
         }
       }
     },

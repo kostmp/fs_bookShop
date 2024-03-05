@@ -10,6 +10,13 @@ sap.ui.define([
         return Controller.extend("project1.controller.Main", {
             onInit: function () {
 
+            },
+            onNavToTransactions: function(oEvent) {
+                let sBookID = oEvent.getSource().getBindingContext().getObject().ID;
+                let oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteTransactions",{
+                    ID: sBookID
+                });
             }
         });
     });

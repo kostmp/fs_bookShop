@@ -1,11 +1,11 @@
-<mvc:View controllerName="project1.controller.Main"
+<mvc:View controllerName="project1.controller.Transactions"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-        <Table id="booksTable" items="{path: '/Books', parameters: {expand: 'author'}}">
+        <!-- <Table id="booksTable" items="{path: '/Transactions', parameters: {expand: 'author'}}">
             <columns>
-            <!-- Column for Book Name -->
+            
             <Column>
                 <Text text="Name" />
             </Column>
@@ -13,7 +13,7 @@
                 <Text text="Author" />
             </Column>
             
-            <!-- Column for Total Copies -->
+            
             <Column>
                 <Text text="Total Copies" />
             </Column>
@@ -22,19 +22,19 @@
         <items>
             <ColumnListItem type="Navigation" press="onNavToTransactions">
                 <cells>
-                    <!-- Cell for Book Name -->
+                    
                     <ObjectIdentifier title="{name}" />
                     
-                    <!-- Cell for Author Name -->
-                    <!-- Adjust path as needed based on your OData service and navigation properties -->
+                    
+                   
                     <Text text="{author/name}" />
                     
-                    <!-- Cell for Total Copies -->
+                    
                     <Text text="{totalCopies}" />
                 </cells>
             </ColumnListItem>
         </items>
-    </Table>
-        </content>
+    </Table> -->
+    </content>
     </Page>
 </mvc:View>
