@@ -3,7 +3,7 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-        <Table id="booksTable" items="{/Books}">
+        <Table id="booksTable" items="{path: '/Books', parameters: {expand: 'author'}}">
             <columns>
             <!-- Column for Book Name -->
             <Column>
