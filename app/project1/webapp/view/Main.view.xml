@@ -2,6 +2,39 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+        <Table id="booksTable" items="{/Books}">
+            <columns>
+            <!-- Column for Book Name -->
+            <Column>
+                <Text text="Name" />
+            </Column>
+            <Column>
+                <Text text="Author" />
+            </Column>
+            
+            <!-- Column for Total Copies -->
+            <Column>
+                <Text text="Total Copies" />
+            </Column>
+        </columns>
+        
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <!-- Cell for Book Name -->
+                    <ObjectIdentifier title="{name}" />
+                    
+                    <!-- Cell for Author Name -->
+                    <!-- Adjust path as needed based on your OData service and navigation properties -->
+                    <Text text="{author/name}" />
+                    
+                    <!-- Cell for Total Copies -->
+                    <Text text="{totalCopies}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+        </content>
     </Page>
 </mvc:View>
