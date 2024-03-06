@@ -106,7 +106,7 @@
         },
         {
           "name": "RouteTransactions",
-          "pattern": "Transactions({ID})",
+          "pattern": "book/{ID}",
           "target": [
             "TargetTransactions"
           ]

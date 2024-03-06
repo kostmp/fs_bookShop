@@ -1,40 +1,59 @@
 <mvc:View controllerName="project1.controller.Transactions"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page title="Transaction Details">
         <content>
-        <!-- <Table id="booksTable" items="{path: '/Transactions', parameters: {expand: 'author'}}">
-            <columns>
-            
-            <Column>
-                <Text text="Name" />
-            </Column>
-            <Column>
-                <Text text="Author" />
-            </Column>
-            
-            
-            <Column>
-                <Text text="Total Copies" />
-            </Column>
-        </columns>
-        
-        <items>
-            <ColumnListItem type="Navigation" press="onNavToTransactions">
-                <cells>
-                    
-                    <ObjectIdentifier title="{name}" />
-                    
-                    
-                   
-                    <Text text="{author/name}" />
-                    
-                    
-                    <Text text="{totalCopies}" />
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table> -->
-    </content>
+            <Table id="transactionsTable" items="{path: 'transactions'}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Transactions" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <!-- Column for Transaction Type -->
+                    <Column>
+                        <Text text="Type" />
+                    </Column>
+                    <!-- Column for Transaction Date -->
+                    <Column popinDisplay="Block" demandPopin="true">
+                        <Text text="Date" />
+                    </Column>
+                    <!-- Column for Return Date -->
+                    <Column popinDisplay="Block" demandPopin="true">
+                        <Text text="Return Date" />
+                    </Column>
+                    <!-- Column for Payment -->
+                    <Column hAlign="End">
+                        <Text text="Payment" />
+                    </Column>
+                    <!-- Column for Customer Name -->
+                    <Column>
+                        <Text text="Customer Name" />
+                    </Column>
+                    <!-- Column for Customer Email -->
+                    <Column>
+                        <Text text="Customer Email" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Active">
+                        <cells>
+                            <!-- Cell for Transaction Type -->
+                            <Text text="{transactionType}" />
+                            <!-- Cell for Transaction Date -->
+                            <ObjectIdentifier title="{transactionDate}" />
+                            <!-- Cell for Return Date -->
+                            <ObjectIdentifier title="{returnDate}" />
+                            <!-- Cell for Payment -->
+                            <Text text="{payment}" />
+                            <!-- Cell for Customer Name -->
+                            <Text text="{customer/name}" />
+                            <!-- Cell for Customer Email -->
+                            <Text text="{customer/email}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
